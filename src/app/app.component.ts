@@ -10,4 +10,6 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'Pratham-Soni-Learning-Angular';
+  course:string = 'Javascript Frameworks';
+  courseCredit:number = 3;
 }
