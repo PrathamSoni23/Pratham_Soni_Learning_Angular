@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import {User} from "./Shared/Models/user";
 
 @Component({
   selector: 'app-root',
@@ -13,3 +14,4 @@ export class AppComponent {
   course:string = 'Javascript Frameworks';
   courseCredit:number = 3;
 }
+
