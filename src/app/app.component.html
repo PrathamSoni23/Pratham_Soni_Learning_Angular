@@ -1,13 +1,11 @@
-<html>
 
-<head>
-  <title>Welcome to the new Project!</title>
-</head>
 
-<body>
+<div class="container">
+  <div *ngFor="let movie of movieList">
+    <h2>{{ movie.name }} written and directed by {{ movie.director }}</h2>
+    <h3>hit the screens in {{ movie.yearReleased }}</h3>
+    <h3>Collection: ${{ movie.collection }}</h3>
+    <h4 *ngIf="movie.isHit"> {{ movie.name }} was a big hit!</h4>
+  </div>
+</div>
 
-<h1>Hey there! Introducing you to {{title}} based on {{course}} which is worth {{courseCredit}} credits. </h1>
-
-</body>
-
-</html>

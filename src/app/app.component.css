@@ -1,0 +1,40 @@
+
+
+
+.container div{
+
+  font-family: "Comic Sans MS";
+  border: 5px;
+  background-color: aquamarine;
+  border-radius: 4px;
+  padding: 5px 2px 5px 2px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  margin: 30px;
+}
+
+h2{
+
+  background-color: black;
+  color: plum;
+}
+
+h3 {
+
+  color: plum;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: black;
+
+}
+
+h4 {
+
+  background-color: black;
+  color: red;
+  font-style: italic;
+}
+
+.container {
+
+  background-color: antiquewhite;
+}

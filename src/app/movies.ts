@@ -1,9 +1,9 @@
 export interface Movies {
 
-  title:string,
+  name:string,
   director:string,
   yearReleased:string,
   collection:number,
-  hit?:boolean;
+  isHit?:boolean;
 
 }
