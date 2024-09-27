@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { Movies } from "./movies";
+import {MovieListComponent} from "./movie-list/movie-list.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet],
+  imports: [CommonModule, RouterOutlet, MovieListComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

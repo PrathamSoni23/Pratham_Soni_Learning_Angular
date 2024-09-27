@@ -6,6 +6,9 @@
     <h3>hit the screens in {{ movie.yearReleased }}</h3>
     <h3>Collection: ${{ movie.collection }}</h3>
     <h4 *ngIf="movie.isHit"> {{ movie.name }} was a big hit!</h4>
+
+    <app-movie-list></app-movie-list>
+
   </div>
 </div>
 
