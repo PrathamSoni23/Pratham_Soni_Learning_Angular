@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { Movies } from "./movies";
 import {MovieListComponent} from "./movie-list/movie-list.component";
+import {MovieListItemComponent} from "./movie-list-item/movie-list-item.component";
 
 @Component({
   selector: 'app-root',
