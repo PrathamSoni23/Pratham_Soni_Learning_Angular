@@ -1,14 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { Movies } from "./movies";
 import {MovieListComponent} from "./movie-list/movie-list.component";
 import {MovieListItemComponent} from "./movie-list-item/movie-list-item.component";
+import {movieItems} from "./data/mockMovie";
+import {MoviesDataService} from "./Services/movies-data.service";
+import {Movie} from "./Shared/Models/movies";
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, MovieListComponent],
+  imports: [CommonModule, RouterOutlet, MovieListComponent, MovieListItemComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -25,6 +29,10 @@ export class AppComponent {
     {name: 'Hate Story', director: 'Emraan', yearReleased: '2016', collection:10000, isHit:false}
 
   ];
+
+  protected readonly movieItems = movieItems;
+
+
 
 }
 
