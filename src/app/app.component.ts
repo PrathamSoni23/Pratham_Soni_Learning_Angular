@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { provideRouter, Routes } from '@angular/router';
 import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { Movies } from "./movies";
@@ -7,6 +8,8 @@ import {MovieListItemComponent} from "./movie-list-item/movie-list-item.componen
 import {movieItems} from "./data/mockMovie";
 import {MoviesDataService} from "./Services/movies-data.service";
 import {Movie} from "./Shared/Models/movies";
+import {bootstrapApplication} from "@angular/platform-browser";
+import {routes} from "./app.routes";
 
 
 @Component({
@@ -32,7 +35,18 @@ export class AppComponent {
 
   protected readonly movieItems = movieItems;
 
-
-
 }
+
+const routes: Routes = [
+
+  {path:'', component: MovieListComponent },
+  {path: '', component: MovieListItemComponent }
+
+];
+
+bootstrapApplication(AppComponent, {
+  providers : [provideRouter(routes)]
+});
+
+
 
