@@ -17,7 +17,8 @@ const routes: Routes = [
   {path:'movie-list', component: MovieListComponent },
   {path: 'movie-list-item', component: MovieListItemComponent },
   { path: 'Page-not-found', component: PageNotFoundComponent},
-  {path: 'modify-list-item', component: ModifyListItemComponent}
+  {path: 'modify-list-item', component: ModifyListItemComponent},
+  {path: '**', component: PageNotFoundComponent},
 
 ];
 

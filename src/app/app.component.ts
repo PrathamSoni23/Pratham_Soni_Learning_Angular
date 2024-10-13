@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { RouterOutlet } from '@angular/router';
+import {RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { Movies } from "./movies";
 import {MovieListComponent} from "./movie-list/movie-list.component";
@@ -16,7 +16,7 @@ import {ModifyListItemComponent} from "./modify-list-item/modify-list-item.compo
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, MovieListComponent, MovieListItemComponent],
+  imports: [CommonModule, RouterOutlet, MovieListComponent, MovieListItemComponent, RouterLink, RouterLinkActive],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
