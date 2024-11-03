@@ -33,9 +33,9 @@ export class MoviesDataService {
 
   updateMovie(modifyMovie : Movie): Observable<Movie[]> {
 
-    const movieyear = this.movies.findIndex(user => user.yearReleased === modifyMovie.yearReleased);
-    if (movieyear !== -1) {
-      this.movies[movieyear] = modifyMovie;
+    const movieYear = this.movies.findIndex(user => user.yearReleased === modifyMovie.yearReleased);
+    if (movieYear !== -1) {
+      this.movies[movieYear] = modifyMovie;
     }
     return of(this.movies);
 
