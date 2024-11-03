@@ -49,4 +49,9 @@ export class MoviesDataService {
 
   }
 
+  generateNewId() : number {
+
+    return this.movies.length > 0 ? Math.max(...this.movies.map(movie => movie.yearReleased)) +1 : 1;
+  }
+
 }
