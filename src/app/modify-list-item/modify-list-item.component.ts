@@ -23,14 +23,14 @@ import {NgIf} from "@angular/common";
 export class ModifyListItemComponent implements OnInit {
 
 
-  movieForm : FormGroup;
+  movieForm: FormGroup;
   movie: Movie | undefined;
 
   constructor(
+    private movieDataService: MoviesDataService,
     private fb: FormBuilder,
     private route: ActivatedRoute,
-    private movieDataService : MoviesDataService,
-    private router : Router
+    private router: Router
   ) {
 
     this.movieForm = this.fb.group({
@@ -39,14 +39,14 @@ export class ModifyListItemComponent implements OnInit {
       production: ['', Validators.required],
       yearReleased: ['', Validators.required]
 
-    })
+    });
 
   }
 
 
   ngOnInit(): void {
 
-    const id = this.route.snapshot.paramMap.get('id');
+    const id = this.route.snapshot.paramMap.get('yearReleased');
     if (id) {
 
       this.movieDataService.findMovieYear(+id).subscribe(movie => {
@@ -69,32 +69,19 @@ export class ModifyListItemComponent implements OnInit {
 
     if (movie.yearReleased) {
 
-      this.movieDataService.updateMovie(movie);
+      this.movieDataService.updateMovie(movie).subscribe(() => {
+        this.router.navigate(['/movie-list-component']);
+        this.movieForm.reset();
+      });
 
     } else {
 
-      const newYearId = this.movieDataService.generateNewId();
-
-      movie.yearReleased = newYearId;
-      this.movieDataService.addMovie(movie);
+      movie.yearReleased = this.movieDataService.generateNewId();
+      this.movieDataService.addMovie(movie).subscribe(() => {
+        this.router.navigate(['/movie-list-component']);
+        this.movieForm.reset();
+      });
     }
-
-    this.router.navigate(['/movies']);
   }
-
-  onDelete(): void {
-
-    const id = this.movieForm.get('id')?.value;
-    if (id) {
-      this.movieDataService.removeMovie(id);
-      this.router.navigate(['/movies']);
-    }
-
-  }
-
-  navigateToMovieList() : void {
-    this.router.navigate(['/movies']);
-  }
-
-
 }
+

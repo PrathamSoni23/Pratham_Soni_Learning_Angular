@@ -1,0 +1,38 @@
+
+form {
+
+  background-color: plum;
+  padding: 10px;
+  margin: 20px;
+}
+
+h2 {
+
+  color: yellow;
+  font-weight: bold;
+}
+
+.form-group {
+
+  margin: 10px 10px 10px 10px;
+
+
+}
+
+input[type= "text"], input[type="number"], input[type="checkbox"], button {
+
+  padding: 5px;
+  margin: 10px;
+
+}
+
+button {
+
+  background-color: yellow;
+
+}
+
+
+
+
+

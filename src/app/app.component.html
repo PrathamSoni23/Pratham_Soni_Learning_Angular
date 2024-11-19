@@ -1,12 +1,11 @@
-<div>
+<div class="container">
   <nav>
-    <li><a routerLink="/movie-list" routerLinkActive="active">Home</a></li>
+    <ul>
+    <li><a routerLink="/movie-list-component" routerLinkActive="active">Home</a></li>
     <li><a routerLink="/modify-list-item" routerLinkActive="active">Modify List Item</a></li>
+    </ul>
   </nav>
-</div>
-<div class = "app-container">
-
-  <app-movie-list></app-movie-list>
   <app-movie-list-item></app-movie-list-item>
   <router-outlet></router-outlet>
 </div>
+

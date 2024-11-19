@@ -1,5 +1,11 @@
+
+
+
 <div *ngFor="let movieOne of movieItems; let i = index" [ngClass]= "i % 2 === 0 ? 'evenClass' : 'oddClass'">
 <app-movie-list-item [movieItems]="movieOne"></app-movie-list-item>
+  <button (click)="editMovie(movieOne)"> Edit </button>
+  <button (click)="deleteMovie(movieOne.yearReleased)"> Delete </button>
+
 </div>
 
 

@@ -7,6 +7,8 @@ import {movieItems} from "../data/mockMovie";
   providedIn: 'root'
 })
 
+
+
 export class MoviesDataService {
 
   private movies: Movie[] =movieItems;
@@ -31,20 +33,19 @@ export class MoviesDataService {
 
   }
 
-  updateMovie(modifyMovie : Movie): Observable<Movie[]> {
+  updateMovie(modifyMovie : Movie): Observable<Movie[] | undefined> {
 
     const movieYear = this.movies.findIndex(user => user.yearReleased === modifyMovie.yearReleased);
-    if (movieYear !== -1) {
+    if (movieYear > -1) {
       this.movies[movieYear] = modifyMovie;
     }
     return of(this.movies);
 
   }
 
-  removeMovie(deleteMovie : number): Observable<Movie[]> {
+  removeMovie(deleteMovie : number): void {
 
     this.movies = this.movies.filter(user => user.yearReleased !== deleteMovie);
-    return of(this.movies);
 
 
   }
