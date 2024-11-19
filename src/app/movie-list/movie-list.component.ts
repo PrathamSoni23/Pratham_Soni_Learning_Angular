@@ -1,18 +1,18 @@
 import {Component, OnInit} from '@angular/core';
 import {MovieListItemComponent} from "../movie-list-item/movie-list-item.component";
 import {Movie} from "../Shared/Models/movies";
-import {NgClass, NgFor, NgIf, NgStyle} from "@angular/common";
+import {DatePipe, NgClass, NgFor, NgIf, NgStyle} from "@angular/common";
 import {Movies} from "../movies";
 import {MoviesDataService} from "../Services/movies-data.service";
 import {movieItems} from "../data/mockMovie";
-import {Router} from "@angular/router";
+import {Router, RouterLink} from "@angular/router";
 
 
 @Component({
   selector: 'app-movie-list',
   standalone: true,
   imports: [
-    MovieListItemComponent, NgFor, NgClass, NgIf, NgStyle
+    MovieListItemComponent, NgFor, NgClass, NgIf, NgStyle, RouterLink, DatePipe
   ],
   templateUrl: './movie-list.component.html',
   styleUrl: './movie-list.component.css'

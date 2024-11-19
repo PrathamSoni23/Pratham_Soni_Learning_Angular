@@ -1,9 +1,10 @@
 <div class="movie-item">
 
   <img src="app/mlogo.jpeg" width="200" height="188" loading="eager"/>
-  <h2>{{movieItems?.movieTitle}}</h2>
+  <h2>{{movieItems?.movieTitle | titlecase}}</h2>
   <h3>{{movieItems?.director}}</h3>
-  <h3>{{movieItems?.production}}</h3>
-  <h3>{{movieItems?.yearReleased}}</h3>
+  <h3>{{movieItems?.production | uppercase}}</h3>
+  <h3>{{movieItems?.yearReleased }}</h3>
+  <h3>{{movieItems?.collection | currency: 'USD'}}</h3>
 
 </div>

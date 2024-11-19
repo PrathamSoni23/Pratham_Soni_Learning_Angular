@@ -4,6 +4,7 @@ export interface Movie {
     director: string;
     production: string;
     yearReleased: number;
+    collection: number;
 
 }
 
