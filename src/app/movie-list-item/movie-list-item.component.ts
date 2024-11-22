@@ -11,7 +11,7 @@ import {CurrencyPipe, DatePipe, NgOptimizedImage, TitleCasePipe, UpperCasePipe} 
     CurrencyPipe,
     UpperCasePipe,
     DatePipe,
-    TitleCasePipe
+    TitleCasePipe,
   ],
   templateUrl: './movie-list-item.component.html',
   styleUrl: './movie-list-item.component.css'

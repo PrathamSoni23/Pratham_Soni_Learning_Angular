@@ -37,7 +37,8 @@ export class ModifyListItemComponent implements OnInit {
       movieTitle: ['', Validators.required],
       director: ['', Validators.required],
       production: ['', Validators.required],
-      yearReleased: ['', Validators.required]
+      yearReleased: ['', Validators.required],
+      collection: ['', Validators.required]
 
     });
 
