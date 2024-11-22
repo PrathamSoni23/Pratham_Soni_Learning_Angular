@@ -8,7 +8,7 @@ import {ActivatedRoute, Router} from "@angular/router";
 import {MoviesDataService} from "../Services/movies-data.service";
 import {movieItems} from "../data/mockMovie";
 import {NgIf} from "@angular/common";
-
+import {HighlightOnFocusDirective} from "../directives/highlight-on-focus.directive";
 
 
 @Component({
@@ -16,7 +16,8 @@ import {NgIf} from "@angular/common";
   standalone: true,
   imports: [ReactiveFormsModule,
             FormsModule,
-            NgIf],
+            NgIf,
+            HighlightOnFocusDirective],
   templateUrl: './modify-list-item.component.html',
   styleUrl: './modify-list-item.component.css'
 })
